@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<style>
+    body{
+        background-color: #162652;
+        color: aqua;
+    }
+    .loginbox{
+        width: 500px;
+        height: 600px;
+        box-sizing: border-box;
+        margin: 180px auto; 
+        padding: 40px;
+        background: rgba(0, 0, 0, 5);
+        box-shadow: 5px 15px 25px rgba(0, 0, 0, 6);
+    }
+    h2{
+        text-align: center;
+        margin-bottom: 30px;
+        color: #ffffff;
+        letter-spacing: 3px;
+        font-size: 32px;
+        text-shadow: 0px 0px 5px #ffffff,
+                     0 0 25px #ffffff,
+                     0 0 50px #ffffff;
+    }
+    .item{
+        height: 100px;
+        border-bottom: 1px solid #ffffff;
+        position: relative;
+    }
+    .item input{
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        background: transparent;
+        color:#ffffff;
+        padding-top: 80px;
+        box-sizing: border-box;
+    }
+    label{
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        font-size: 22px;
+    }
+    input:focus ~ label,input:valid ~ label{
+        font-size: 16px;
+        font-weight: 200;
+        transition: all 0.4s;
+    }
+    .btn{
+        background: transparent;
+        height: 30px;
+        border: none;
+        color: #ffffff;
+        margin-top: 200px;
+        letter-spacing: 2px;
+        font-weight: 600;
+        position: relative;
+        overflow: hidden;
+    }
+    .btn:hover{
+        border-radius: 5px;
+        box-shadow: 0 0 5px aqua,
+                    0 0 25px aqua,
+                    0 0 50px aqua;
+        background-color: aqua;
+        color: #000015;
+    }
+    .btn>span{
+        position: absolute;
+    }
+    @keyframes line1{
+        50%,100%{
+            left: 100%;
+        }
+    }
+    
+    .btn>span:nth-child(1){
+        width: 100%;
+        height: 2px;
+        background: -webkit-linear-gradient(left,transparent,aqua);
+        left: -100%;
+        top: -1px;
+        animation: line1 1s linear infinite;
+    }
+    @keyframes line2{
+        50%,100%{
+            top: 100%;
+        }
+    }
+    .btn>span:nth-child(2){
+        width: 2px;
+        height: 100%;
+        background: -webkit-linear-gradient(top,transparent,aqua);
+        right: -1px;
+        top: -100%;
+        animation: line2 1s  0.25s linear infinite;
+    }
+    @keyframes line3{
+        50%,100%{
+            right: 100%;
+        }
+    }
+    .btn>span:nth-child(3){
+        width: 100%;
+        height: 2px;
+        background: -webkit-linear-gradient(right,transparent,aqua);
+        right: -100%;
+        bottom: -1px;
+        animation: line3 1s  0.5s linear infinite;
+    }
+    @keyframes line4{
+        50%,100%{
+            bottom: 100%;
+        }
+    }
+    .btn>span:nth-child(4){
+        width: 2px;
+        height: 100%;
+        background: -webkit-linear-gradient(bottom,transparent,aqua);
+        left: -1px;
+        bottom: -100%;
+        animation: line4 1s  0.75s linear infinite;
+    }
+</style>
+<body>
+    <div class="loginbox">
+        <h2>login</h2>
+        <form action="get">
+            <div class="item">
+                <input type="text" id="Username" required>
+                <label for="Username">Username</label>
+            </div>
+            <div class="item">
+                <input type="password" id="password" required>
+                <label for="password">Password</label>
+            </div> 
+            <button class="btn">SUBMIT
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </form>
+        
+    </div>
+</body>
+</html>
